@@ -3,15 +3,19 @@
 #include <stdlib.h>
 #include <unistd.h>
 
-typedef struct scamp_args {
+/**
+ * @brief This is where we store our command line arguments
+ */
+struct global_args {
     int dumpconfig;
     int verbosity;
     int numInputFiles;
     char **inputFiles;
-} ScampArgs; 
+} GLOBAL_ARGS; 
 
-ScampArgs GLOBAL_ARGS;;
-
+/**
+ * @brief print command line options
+ */
 void
 print_opts() {
     int i;
@@ -28,18 +32,20 @@ print_opts() {
     }
 }
 
+/**
+ * @brief Our main function
+ */
 int
 main(int argc, char** argv) {
-    int aflag = 0, bflag = 0, dumplevel = 0, index, c;
-    char *cvalue = NULL;
+    int opt;
 
     GLOBAL_ARGS.dumpconfig = 0;
     GLOBAL_ARGS.verbosity = 0;
     GLOBAL_ARGS.inputFiles = NULL;
     GLOBAL_ARGS.numInputFiles = 0;
 
-    while ((c = getopt(argc,argv, "vd")) != -1) {
-        switch (c)
+    while ((opt = getopt(argc,argv, "vd")) != -1) {
+        switch (opt)
         {
             case 'v':
                 GLOBAL_ARGS.verbosity++;
@@ -58,5 +64,14 @@ main(int argc, char** argv) {
 
     print_opts();
 
-    return 0;
+
+    /*
+     * Handle arguments
+     */
+    if (GLOBAL_ARGS.dumpconfig > 0) {
+        printf("Dump config \n");
+        exit(EXIT_SUCCESS);
+    }
+
+    return EXIT_SUCCESS;
 }
