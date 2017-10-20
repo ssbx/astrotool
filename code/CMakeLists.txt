@@ -3,6 +3,14 @@ include_directories(
     ${FITS_INCLUDES}
 )
 
+if (MPI_C_FOUND)
+    include_directories(${MPI_C_INCLUDE_PATH})
+    add_executable(mainmpi
+        main_mpi.c)
+    target_link_libraries(mainmpi
+        ${MPI_C_LIBRARIES})
+endif (MPI_C_FOUND)
+
 add_executable(scamp2
  main.c)
 target_link_libraries(scamp2 
