@@ -1,3 +1,4 @@
+#include <omp.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
@@ -18,7 +19,6 @@ struct global_args {
 void
 print_opts() {
     int i;
-
     printf("Verbose option: %i\n", GLOBAL_ARGS.verbosity);
     printf("Dumpconfig option: %i\n", GLOBAL_ARGS.dumpconfig);
 
@@ -36,7 +36,7 @@ print_opts() {
  */
 int
 main(int argc, char** argv) {
-    int opt;
+    int opt, nthreads, tid;
 
     GLOBAL_ARGS.dumpconfig = 0;
     GLOBAL_ARGS.verbosity = 0;
@@ -72,5 +72,24 @@ main(int argc, char** argv) {
         exit(EXIT_SUCCESS);
     }
 
+    /* OpenMP test */
+    /* Fork a team of threads giving them their own copies of variables */
+#pragma omp parallel private(nthreads, tid)
+    {
+
+        /* Obtain thread number */
+        tid = omp_get_thread_num();
+        printf("Hello World from thread = %d\n", tid);
+
+        /* Only master thread does this */
+        if (tid == 0) 
+        {
+            nthreads = omp_get_num_threads();
+            printf("Number of threads = %d\n", nthreads);
+        }
+
+    }  /* All threads join master thread and disband */
+
     return EXIT_SUCCESS;
 }
+
