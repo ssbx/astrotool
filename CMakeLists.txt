@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8)
-project(scamp2)
+project(dance)
 enable_language(C)
 
 find_package(LAPACK REQUIRED)

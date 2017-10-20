@@ -1,5 +1,7 @@
 #!/bin/sh
 
+git submodule update --init
+
 # cleanup build dir if exist
 rm -rf _build
 
@@ -13,7 +15,7 @@ all:
 	make -C _build all
 
 clean_all:
-	git clean -Xdf
+	rm -rf _build Makefile
 
 indent:
 	find . -name *.h -o -name *.c -o -name *.cpp -exec clang-format -i {} \;
