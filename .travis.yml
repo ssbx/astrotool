@@ -1,0 +1,17 @@
+language: c
+
+os:
+  - linux
+
+compiler:
+  - gcc
+  - g++
+  - clang
+
+install:
+  - cmake --version
+
+script:
+  - git submodule update --init
+  - ./configure
+  - make
