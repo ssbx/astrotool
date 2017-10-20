@@ -1,0 +1,3 @@
+[submodule "deps/fits"]
+	path = deps/fits
+	url = https://github.com/ssbx/fits.git
