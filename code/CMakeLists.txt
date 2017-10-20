@@ -3,6 +3,15 @@ include_directories(
     ${FITS_INCLUDES}
 )
 
+add_executable(scamp
+     main.c)
+target_link_libraries(scamp 
+        ${LAPACK_LIBRARIES}
+        ${FITS_LIBRARIES})
+
+add_executable(mainopenmp main_openmp.c)
+
+
 if (MPI_C_FOUND)
     include_directories(${MPI_C_INCLUDE_PATH})
     add_executable(mainmpi
@@ -10,12 +19,6 @@ if (MPI_C_FOUND)
     target_link_libraries(mainmpi
         ${MPI_C_LIBRARIES})
 endif (MPI_C_FOUND)
-
-add_executable(scamp2
- main.c)
-target_link_libraries(scamp2 
-        ${LAPACK_LIBRARIES}
-        ${FITS_LIBRARIES})
 
 add_executable(step1_printFitsTable
     step1_printFitsTable.c)
