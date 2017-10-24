@@ -1,0 +1,15 @@
+add_library(
+fitsbody.c
+fitscat.c
+fitscat.h
+fitscat_defs.h
+fitscheck.c
+fitscleanup.c
+fitsconv.c
+fitshead.c
+fitskey.c
+fitsmisc.c
+fitsread.c
+fitstab.c
+fitsutil.c
+fitswrite.c)

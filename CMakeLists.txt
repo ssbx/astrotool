@@ -9,7 +9,6 @@ set(BLA_STATIC TRUE)
 find_package(OpenMP REQUIRED)
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} ${OpenMP_C_FLAGS}")
 
-add_subdirectory(deps)
 add_subdirectory(code)
 
 enable_testing()
