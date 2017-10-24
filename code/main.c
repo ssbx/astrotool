@@ -36,7 +36,12 @@ print_opts() {
  */
 int
 main(int argc, char** argv) {
-    int opt;
+    int opt, i;
+    struct tm *tinfo;
+
+   /*
+    * Handle options
+    */
 
     GLOBAL_ARGS.dumpconfig = 0;
     GLOBAL_ARGS.verbosity = 0;
@@ -63,15 +68,14 @@ main(int argc, char** argv) {
 
     print_opts();
 
-
-    /*
-     * Handle arguments
-     */
-    if (GLOBAL_ARGS.dumpconfig > 0) {
-        printf("Dump config \n");
-        exit(EXIT_SUCCESS);
+   /*
+    * Open files
+    */
+    for (i=0; i< GLOBAL_ARGS.numInputFiles; i++) {
     }
-
+    
+    
+    
     return EXIT_SUCCESS;
 }
 
