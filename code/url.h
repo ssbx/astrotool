@@ -1,32 +1,32 @@
 /*
-*				urlt.h
-*
-* Include file for url.c (adapted from fopen.c by V.Sanders).
-*
-*%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-*
-*	This file part of:	SCAMP
-*
-*	Copyright:		(C) 2002-2016 Emmanuel Bertin -- IAP/CNRS/UPMC
-*
-*	License:		GNU General Public License
-*
-*	SCAMP is free software: you can redistribute it and/or modify
-*	it under the terms of the GNU General Public License as published by
-*	the Free Software Foundation, either version 3 of the License, or
-* 	(at your option) any later version.
-*	SCAMP is distributed in the hope that it will be useful,
-*	but WITHOUT ANY WARRANTY; without even the implied warranty of
-*	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-*	GNU General Public License for more details.
-*	You should have received a copy of the GNU General Public License
-*	along with SCAMP. If not, see <http://www.gnu.org/licenses/>.
-*	This file incorporates work covered by the copyright and permission
-*	notice below.
-*
-*	Last modified:		31/03/2016
-*
-*%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%*/
+ *				urlt.h
+ *
+ * Include file for url.c (adapted from fopen.c by V.Sanders).
+ *
+ *%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ *
+ *	This file part of:	SCAMP
+ *
+ *	Copyright:		(C) 2002-2016 Emmanuel Bertin -- IAP/CNRS/UPMC
+ *
+ *	License:		GNU General Public License
+ *
+ *	SCAMP is free software: you can redistribute it and/or modify
+ *	it under the terms of the GNU General Public License as published by
+ *	the Free Software Foundation, either version 3 of the License, or
+ * 	(at your option) any later version.
+ *	SCAMP is distributed in the hope that it will be useful,
+ *	but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *	GNU General Public License for more details.
+ *	You should have received a copy of the GNU General Public License
+ *	along with SCAMP. If not, see <http://www.gnu.org/licenses/>.
+ *	This file incorporates work covered by the copyright and permission
+ *	notice below.
+ *
+ *	Last modified:		31/03/2016
+ *
+ *%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%*/
 /*****************************************************************************
  * Re-implemented by Vincent Sanders <vince@kyllikki.org> with extensive
  * reference to original curl example code
@@ -59,24 +59,22 @@
 #ifndef _URL_H_
 #define _URL_H_
 
-#ifndef __CURL_CURL_H
-#include CURL_H
-#endif
+#include "curl/curl.h"
 
 /*--------------------------------- typedefs --------------------------------*/
 typedef struct fcurl_data {
-  CURL *curl;
-  char *buffer;               /* buffer to store cached data*/
-  size_t buffer_len;          /* currently allocated buffers length */
-  size_t buffer_pos;          /* end of data in buffer*/
-  int still_running;          /* Is background url fetch still in progress */
+    CURL *curl;
+    char *buffer;               /* buffer to store cached data*/
+    size_t buffer_len;          /* currently allocated buffers length */
+    size_t buffer_pos;          /* end of data in buffer*/
+    int still_running;          /* Is background url fetch still in progress */
 }	URL_FILE;
 
 /*------------------------------- functions ---------------------------------*/
 URL_FILE	*url_fopen(const char *url, double timeout);
 
 int		url_fclose(URL_FILE *file),
-		url_feof(URL_FILE *file);
+        url_feof(URL_FILE *file);
 
 size_t		url_fread(void *ptr, size_t size, size_t nmemb, URL_FILE *file);
 

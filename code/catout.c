@@ -37,7 +37,7 @@
 
 #include "define.h"
 #include "globals.h"
-#include "fits/fitscat.h"
+#include "formats/fits/fitscat.h"
 #include "cathead.h"
 #include "catout.h"
 #include "fgroup.h"

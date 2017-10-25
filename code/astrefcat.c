@@ -41,8 +41,8 @@
 
 #include "define.h"
 #include "globals.h"
-#include "fits/fitscat.h"
-#include "fitswcs.h"
+#include "formats/fits/fitscat.h"
+#include "formats/fitswcs.h"
 #include "astrefcat.h"
 #include "field.h"
 #include "key.h"

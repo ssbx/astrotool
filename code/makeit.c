@@ -52,7 +52,7 @@
 #include "fft.h"
 #include "fgroup.h"
 #include "field.h"
-#include "fits/fitscat.h"
+#include "formats/fits/fitscat.h"
 #include "header.h"
 #include "match.h"
 #include "merge.h"
@@ -63,7 +63,7 @@
 #ifdef USE_THREADS
 #include "threads.h"
 #endif
-#include "wcs/wcs.h"
+#include "formats/wcs/wcs.h"
 #include "xml.h"
 
 time_t		thetime, thetime2;

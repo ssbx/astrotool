@@ -37,15 +37,15 @@
 
 #include "define.h"
 #include "globals.h"
-#include "fits/fitscat.h"
-#include "fitswcs.h"
+#include "formats/fits/fitscat.h"
+#include "formats/fitswcs.h"
 #include "field.h"
 #include "prefs.h"
 #include "samples.h"
 #ifdef USE_THREADS
 #include "threads.h"
 #endif
-#include "wcs/wcs.h"
+#include "formats/wcs/wcs.h"
 
 //#define WFCAM_FIX	1
 

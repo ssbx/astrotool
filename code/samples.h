@@ -26,12 +26,10 @@
 *
 *%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%*/
 
-#ifndef _FITSWCS_H_
-#include "fitswcs.h"
-#endif
-
 #ifndef _SAMPLES_H_
 #define _SAMPLES_H_
+
+#include "formats/fitswcs.h"
 
 /*--------------------------------- constants -------------------------------*/
 

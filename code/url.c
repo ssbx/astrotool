@@ -80,7 +80,7 @@
 #include <errno.h>
 #include <sys/time.h>
 
-#include CURL_H
+#include <curl/curl.h>
 
 #include "url.h"
 

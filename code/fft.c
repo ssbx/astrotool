@@ -42,13 +42,13 @@
 #endif
 
 #ifndef FFTW3_H
-#include FFTW_H
+#include <fftw3.h>
 #endif
 
 #include "define.h"
 #include "globals.h"
 #include "fft.h"
-#include "fits/fitscat.h"
+#include "formats/fits/fitscat.h"
 #include "prefs.h"
 #ifdef USE_THREADS
 #include "threads.h"

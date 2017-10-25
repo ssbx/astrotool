@@ -40,13 +40,14 @@
 #include "crossid.h"
 #include "fgroup.h"
 #include "field.h"
-#include "fits/fitscat.h"
-#include "fitswcs.h"
+#include "formats/fits/fitscat.h"
+#include "formats/fitswcs.h"
 #include "photsolve.h"
 #include "prefs.h"
 #include "samples.h"
-#include "wcs/poly.h"
+#include "formats/wcs/poly.h"
 
+#include <openblas/cblas.h>
 #ifdef HAVE_ATLAS
 #include ATLAS_LAPACK_H
 #endif

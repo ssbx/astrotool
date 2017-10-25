@@ -37,12 +37,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <openblas/cblas.h>
 
 #include "define.h"
 #include "globals.h"
 #include "field.h"
-#include "fits/fitscat.h"
-#include "fitswcs.h"
+#include "formats/fits/fitscat.h"
+#include "formats/fitswcs.h"
 #include "match.h"
 #include "mosaic.h"
 #include "misc.h"

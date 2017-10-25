@@ -26,24 +26,14 @@
  *
  *%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%*/
 
-#ifdef HAVE_CONFIG_H
-#include	"config.h"
-#endif
-
-#ifndef _FITSCAT_H_
-#include "fits/fitscat.h"
-#endif
-
-#ifndef _FITSWCS_H_
-#include "fitswcs.h"
-#endif
-
-#ifndef _SAMPLES_H_
-#include "samples.h"
-#endif
-
 #ifndef _FIELD_H_
 #define _FIELD_H_
+
+#include "formats/fits/fitscat.h"
+#include "formats/fitswcs.h"
+
+#include "samples.h"
+
 
 
 /*----------------------------- Internal constants --------------------------*/

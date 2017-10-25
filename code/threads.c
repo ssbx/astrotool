@@ -43,7 +43,7 @@
 #include "define.h"
 #include "types.h"
 #include "globals.h"
-#include "fits/fitscat.h"
+#include "formats/fits/fitscat.h"
 
 #ifdef USE_THREADS
 

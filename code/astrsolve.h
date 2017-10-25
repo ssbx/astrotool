@@ -26,24 +26,15 @@
 *
 *%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%*/
 
-#ifndef _FIELD_H_
-#include "field.h"
-#endif
-
-#ifndef _FGROUP_H_
-#include "fgroup.h"
-#endif
-
-#ifndef _POLY_H_
-#include "wcs/poly.h"
-#endif
-
-#ifndef _SAMPLES_H_
-#include "samples.h"
-#endif
 
 #ifndef _SOLVE_H_
 #define _SOLVE_H_
+
+#include "field.h"
+#include "fgroup.h"
+#include "formats/wcs/poly.h"
+#include "samples.h"
+
 
 /*----------------------------- Internal constants --------------------------*/
 

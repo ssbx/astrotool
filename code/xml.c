@@ -39,7 +39,7 @@
 #include "define.h"
 #include "globals.h"
 #include "astrefcat.h"
-#include "fits/fitscat.h"
+#include "formats/fits/fitscat.h"
 #include "field.h"
 #include "fgroup.h"
 #include "key.h"

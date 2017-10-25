@@ -43,8 +43,8 @@
 #include "astrstats.h"
 #include "fgroup.h"
 #include "field.h"
-#include "fits/fitscat.h"
-#include "fitswcs.h"
+#include "formats/fits/fitscat.h"
+#include "formats/fitswcs.h"
 #include "prefs.h"
 #include "samples.h"
 

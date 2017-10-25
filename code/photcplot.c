@@ -35,15 +35,15 @@
 #include	<stdlib.h>
 #include	<string.h>
 
-#include	PLPLOT_H
-#include	PLPLOTP_H
+#include	<plplot/plplot.h>
+#include	<plplot/plplotP.h>
 
 #include	"define.h"
 #include	"globals.h"
 #include	"cplot.h"
 #include	"fgroup.h"
 #include	"field.h"
-#include	"fitswcs.h"
+#include	"formats/fitswcs.h"
 #include	"prefs.h"
 #include	"samples.h"
 

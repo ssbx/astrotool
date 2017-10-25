@@ -63,14 +63,15 @@
 #include "check.h"
 #include "fft.h"
 #include "field.h"
-#include "fits/fitscat.h"
-#include "fitswcs.h"
+#include "formats/fits/fitscat.h"
+#include "formats/fitswcs.h"
 #include "match.h"
 #include "mosaic.h"
 #include "prefs.h"
 #include "astrefcat.h"
 #include "samples.h"
-#include "wcs/wcs.h"
+#include "formats/wcs/wcs.h"
+#include <openblas/cblas.h>
 
 /*------------------- global variables for multithreading -------------------*/
 #ifdef USE_THREADS

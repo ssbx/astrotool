@@ -57,10 +57,10 @@
 #include	"define.h"
 #include	"globals.h"
 #include	"check.h"
-#include	"fits/fitscat.h"
+#include	"formats/fits/fitscat.h"
 #include 	"prefs.h"
 #include	"preflist.h"
-#include	"fitswcs.h"
+#include	"formats/fitswcs.h"
 
 /********************************* dumpprefs ********************************/
 /*
@@ -95,10 +95,8 @@ void    readprefs(char *filename, char **argkey, char **argval, int narg)
                     *cp,  *keyword, *value, **dp;
     int			i, ival, nkey, warn, argi, flagc, flagd, flage, flagz;
     double		dval;
-#ifdef	HAVE_GETENV
     static char		value2[MAXCHARL],envname[MAXCHAR];
     char			*dolpos, *listbuf;
-#endif
 
 
     if ((infile = fopen(filename,"r")) == NULL)

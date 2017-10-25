@@ -51,9 +51,7 @@
 #define MATSTORAGE_PACKED 1
 #endif
 
-#ifdef HAVE_OPENBLASP
-#include BLAS_H
-#endif
+#include <openblas/cblas.h>
 
 #include <sys/mman.h>
 
@@ -62,12 +60,12 @@
 #include "astrsolve.h"
 #include "fgroup.h"
 #include "field.h"
-#include "fits/fitscat.h"
-#include "fitswcs.h"
+#include "formats/fits/fitscat.h"
+#include "formats/fitswcs.h"
 #include "merge.h"
 #include "prefs.h"
 #include "samples.h"
-#include "wcs/poly.h"
+#include "formats/wcs/poly.h"
 
 #ifdef USE_THREADS
 #include "threads.h"

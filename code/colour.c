@@ -42,8 +42,6 @@
 #include "globals.h"
 #include "fgroup.h"
 #include "field.h"
-#include "fits/fitscat.h"
-#include "fitswcs.h"
 #include "colour.h"
 #include "merge.h"
 #include "photsolve.h"
