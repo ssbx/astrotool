@@ -20,6 +20,9 @@ clean_all:
 indent:
 	find . -name *.h -o -name *.c -o -name *.cpp -exec clang-format -i {} \;
 
+run: all
+	./_build/code/scamp
+
 %:
 	make -C _build \$@
 " > Makefile
